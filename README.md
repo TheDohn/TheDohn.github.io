@@ -1,6 +1,6 @@
 # Data Science Portfolio
 
-Below are a list of (personal) projects I have been working on lately with the goal of developing my data science skills. 
+Below are a list of projects I have been working on lately with the goal of developing my data science skills. 
 
 ## [Kaggle Home Credit Default Risk](https://www.kaggle.com/c/home-credit-default-risk)
 This was my first "real" data science project that wasn't simply a textbook or website exercise.
@@ -16,6 +16,26 @@ UPDATES ARE IN PROGRESS
 |___Home_Credit_package 
 |
 |___other_notebook
+
+
+.
++-- _config.yml
++-- _drafts
+|   +-- begin-with-the-crazy-ideas.textile
+|   +-- on-simplicity-in-technology.markdown
++-- _includes
+|   +-- footer.html
+|   +-- header.html
++-- _layouts
+|   +-- default.html
+|   +-- post.html
++-- _posts
+|   +-- 2007-10-29-why-every-programmer-should-play-nethack.textile
+|   +-- 2009-04-26-barcamp-boston-4-roundup.textile
++-- _data
+|   +-- members.yml
++-- _site
++-- index.html
 
 
 ## Comparing long-term weather forecasts (In Progress)
