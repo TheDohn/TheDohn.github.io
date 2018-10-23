@@ -14,14 +14,14 @@ UPDATES ARE IN PROGRESS
 ```bash
 ├── Kaggle_Home_Credit_Default_Risk_Project
 │   ├── Exploratory_notebooks
-│       ├── note_1
-│       ├── note_2
+│         note_1
+│         note_2
 │   ├── aggreation_notebook
 │   ├── wrangling_notebook
 │   ├── model_notebooks
-│       ├── level_1
-│       ├── level_2
-│       ├── level_3
+│         level_1
+│         level_2
+│         level_3
 │
 │
 ```
