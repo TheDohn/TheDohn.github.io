@@ -7,6 +7,8 @@ This was my first "real" data science project that wasn't simply a textbook or w
 
 UPDATES ARE IN PROGRESS
 
+Unfortunately I do not see anyway of making the entire project available here, so I have put some representative files here in order to demonstrate my thought process throughout the project. 
+
 
 ## Comparing long-term weather forecasts (In Progress)
 A common debate in our household is whether it is worth commiting to long-term plans that are highly weather dependent. i.e. should we make nonrefundable reservations on a Monday for the following Sunday?
