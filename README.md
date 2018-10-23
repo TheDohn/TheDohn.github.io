@@ -5,11 +5,11 @@ Below are a list of (personal) projects I have been working on lately with the g
 ## [Kaggle Home Credit Default Risk](https://www.kaggle.com/c/home-credit-default-risk)
 This was my first "real" data science project that wasn't simply a textbook or website exercise.
 
-UPDATES ARE IN PROGRESS
+*UPDATES ARE IN PROGRESS
 
 Unfortunately I do not see anyway of making the entire project available here since it is 6GB+ and Github places an unofficial limit of 1GB per repository, so I have put some representative files here in order to demonstrate my thought process throughout the project. 
 
-File directory explaination:
+*File directory explaination:
 
 Kaggle Home Credit Default Risk Project
 |
