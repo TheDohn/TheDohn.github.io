@@ -12,10 +12,10 @@ UPDATES ARE IN PROGRESS
 - File directory explaination:
 
 -Kaggle Home Credit Default Risk Project
-|
-|___Home_Credit_package 
-|
-|___other_notebook
+\|
+\|___Home_Credit_package 
+\|
+\|___other_notebook
 
 
 
