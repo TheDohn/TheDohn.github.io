@@ -13,9 +13,11 @@ UPDATES ARE IN PROGRESS
 
 ```bash
 ├── Kaggle_Home_Credit_Default_Risk_Project
+│   ├── Introductory_notebook
 │   ├── Exploratory_notebooks
 │         note_1
 │         note_2
+│   ├── Home_Credit_Package
 │   ├── aggregation_notebook
 │   ├── wrangling_notebook
 │   ├── model_notebooks
@@ -35,3 +37,12 @@ UPDATES ARE IN PROGRESS
 In order to address this question I decided to see just how accurate some popular weather websites forecasts are. While it was unfortunate that I could not find any saved long term forecasts, it was a great exercise to write a program to scrape daily forecasts. That program is collecting data now and when I have enough data I will start to analyze and post the results here.
 
 [Daily forecast scraper](get_daily_weather_forecasts_notebook.ipynb)
+
+
+## Possible future projects
+
+If you see something here of interest, or have other suggestions, please let me know!
+
+- [Human Protein Atlas Image Classification](https://www.kaggle.com/c/human-protein-atlas-image-classification)
+- [Russian bot data](https://github.com/fivethirtyeight/russian-troll-tweets/)
+
