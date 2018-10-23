@@ -13,11 +13,8 @@ UPDATES ARE IN PROGRESS
 
 -Kaggle Home Credit Default Risk Project
 |
-
 |___Home_Credit_package 
-
 |
-
 |___other_notebook
 
 
