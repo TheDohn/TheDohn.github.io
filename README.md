@@ -9,33 +9,19 @@ UPDATES ARE IN PROGRESS
 
 - Unfortunately I do not see anyway of making the entire project available here since it is 6GB+ and Github places an unofficial limit of 1GB per repository, so I have put some representative files here in order to demonstrate my thought process throughout the project. 
 
-- File directory explaination:
-
--Kaggle Home Credit Default Risk Project
-\|
-\|___Home_Credit_package 
-\|
-\|___other_notebook
+- File directory for this project:
 
 ```bash
-├── app
-│   ├── css
-│   │   ├── **/*.css
-│   ├── favicon.ico
-│   ├── images
-│   ├── index.html
-│   ├── js
-│   │   ├── **/*.js
-│   └── partials/template
-├── dist (or build)
-├── node_modules
-├── bower_components (if using bower)
-├── test
-├── Gruntfile.js/gulpfile.js
-├── README.md
-├── package.json
-├── bower.json (if using bower)
-└── .gitignore
+├── Kaggle_Home_Credit_Default_Risk_Project
+│   ├── Exploratory_notebooks
+│       ├── note_1
+|       ├── note_2
+│   ├── aggreation_notebook
+│   ├── wrangling_notebook
+│   ├── model_notebooks
+│       ├── level_1
+│       ├── level_2
+|       ├── level_3
 ```
 
 
