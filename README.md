@@ -9,7 +9,7 @@ This was my first "real" data science project that wasn't simply a textbook or w
 
 -Unfortunately I do not see anyway of making the entire project available here since it is 6GB+ and Github places an unofficial limit of 1GB per repository, so I have put some representative files here in order to demonstrate my thought process throughout the project. 
 
--File directory explaination:
+- File directory explaination:
 
 -Kaggle Home Credit Default Risk Project
 |
