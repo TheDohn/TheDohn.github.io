@@ -16,7 +16,7 @@ UPDATES ARE IN PROGRESS
 │   ├── Exploratory_notebooks
 │         note_1
 │         note_2
-│   ├── aggreation_notebook
+│   ├── aggregation_notebook
 │   ├── wrangling_notebook
 │   ├── model_notebooks
 │         level_1
