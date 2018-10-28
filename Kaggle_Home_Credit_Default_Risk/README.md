@@ -66,19 +66,14 @@ In conclusion, I learned a lot on this project, and I think I will learn more by
 ![](directory.png)
 Fig 1: A directory map of the project.
 
-<p>
-<img src="model_levels.png" , style="width:200px;"/>
-    </p>
+![](model_levels.png)
 Fig 2: Breakdown for the workflow and ensemble levels in the project.
 
-<p>
-<img src="feat_imports.png" , style="width:200px;"/>
-    </p>
+
+![](feat_imports.png)
 Fig 3: Top 20 features ranked by importances for the level 1 Random Forest (all features, no polynomial interactions). This is not the final model in the ensemble, but it gives a good idea what is important. Many of my aggregated features appear. 
 
-<p>
-<img src="gini_times_corr.png" , style="width:200px;"/>
-    </p>
+![](gini_times_corr.png)
 Fig 4: Gini index of a feature times the correlation of that feature with the TARGET. This gives a rough idea of both the spread in a feature and its potential for predicting the TARGET value.
 
 
