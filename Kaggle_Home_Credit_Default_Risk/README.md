@@ -73,3 +73,5 @@ Fig 3: Top 20 features ranked by importances for the level 1 Random Forest (all 
 
 <img src="gini_times_corr.png" , style="width:800px;"/>
 Fig 4: Gini index of a feature times the correlation of that feature with the TARGET. This gives a rough idea of both the spread in a feature and its potential for predicting the TARGET value.
+
+![ScreenShot](gini_times_corr.png)
