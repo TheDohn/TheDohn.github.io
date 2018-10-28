@@ -29,7 +29,7 @@ My best score placed at 4737 place out of 7198 submissions. In the end I was a b
 ## Most important is what I learned from this project:
 
 
-### Improvements to speed up my code, make it more efficient, and save time:
+### Improvements to make my code more efficient, and save time:
 
 - The aggregation step in the analysis could definitely be sped up by implementing the Dask package (Pandas does not have parallelization). Scikit-learn has parallel options I used. 
 
