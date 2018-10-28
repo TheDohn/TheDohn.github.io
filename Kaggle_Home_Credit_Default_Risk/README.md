@@ -19,7 +19,7 @@ My best score placed at 4737 place out of 7198 submissions. In the end I was a b
 
 ## Specific features of my model worth mentioning:
 
-- For the values present in the training data, the EXT_SOURCE_1 feature had a high amount of correlation with the TARGET, but unfortunately was missing many values (~43 percent). This means it was important to keep this feature, and have a strong strategy for imputing missing values. Thus, rather that simply impute missing values with the median, I imputed based a linear fit to DAYS_BIRTH for each gender. 
+- For the values present in the training data, the EXT_SOURCE_1 feature had a high amount of correlation with the TARGET, but unfortunately was missing many values (~43 percent). This means it was important to keep this feature, and have a strong strategy for imputing missing values. Thus, rather that simply impute missing values with the median, I imputed based a linear fit to DAYS_BIRTH for each CODE_GENDER. 
 
 - The aggregation features I created were very reasonable. Many of these ranked in the top 20 in feature importances in the level 2 random forest (anything that ends with a _min, _mean, _median, _max, _sd was an aggregated feature I created). See figure below.
 
