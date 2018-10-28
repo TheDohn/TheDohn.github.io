@@ -46,7 +46,7 @@ My best score placed at 4737 place out of 7198 submissions. In the end I was a b
 
 ### Improvements that could increase my score:
 
-- I dropped whole csv files worth of features, many features from the csv files I did use, and features from my aggregation. This was due to the fact that low correlation with the TARGETs, small variance, and low feature importance scores of initial random forest models indicated that many of these features had low predictive power. Simply keeping these features would have likely given me a small boost.
+- I dropped whole csv files worth of features, many features from the csv files I did use, and features from my aggregation. This was due to the fact that low correlation with the TARGETs, small variance, and low feature importance scores of initial random forest models, indicated that many of these features had low predictive power. Simply keeping these features would have likely given me a small boost.
 
 - I could use automated feature engineering like Featuretools. I was concerned that using this would lead to an even larger number of features, but I could have simply had this as a separate pipeline that feeds into a unique level 1 model for ensembling.
 
