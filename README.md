@@ -2,7 +2,7 @@
 
 Below are a list of projects I have been working on lately with the goal of developing my data science skills. 
 
-## Kaggle Home Credit Default Risk  
+## [Kaggle Home Credit Default Risk](Kaggle_Home_Credit_Default_Risk/)
 
 [Kaggle project description and data](https://www.kaggle.com/c/home-credit-default-risk)
 
@@ -15,10 +15,10 @@ Please note that many csv files are beyond GitHubs upload limitations. In order 
 
 
 
-## Comparing long-term weather forecasts (In Progress)
+## [Comparing long-term weather forecasts](Comparing_long-term_weather_forecasts/) (In Progress)
 A common debate in our household is whether it is worth commiting to long-term plans that are highly weather dependent. i.e. should we make nonrefundable reservations on a Monday for the following Sunday? In order to address this question I decided to see just how accurate some popular weather websites forecasts are. While it was unfortunate that I could not find any saved long term forecasts, it was a great exercise to write a program to scrape daily forecasts. That program is collecting data now and when I have enough data I will start to analyze and post the results here.
 
-[Daily forecast scraper notebook](Comparing_long-term_weather_forecasts/get_daily_weather_forecasts_notebook.ipynb)
+
 
 
 ## Possible future projects
