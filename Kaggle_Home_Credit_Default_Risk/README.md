@@ -37,7 +37,7 @@ My best score placed at 4737 place out of 7198 submissions. In the end I was a b
 
 - I spent a lot of time optimizing hyperparameters. I was initially concerned that I might be missing some small gains if I did not explore the hyperparameter space thoroughly. I think 2 iterations of scanning over reasonable hyperparameter values would have been much more time efficient. For example, one scan over reasonable orders and magnitude, followed by a second scan over a given order of magnitude from the prior scan. For a project like the one I built, for each individual model this would mean reducing a multi-hour process down to an hour or two. 
 
-- I one-hot-key encoded all my categorical features, which led to a large number of features. I could implement ordinal encoding for decision tree models because a Decision Tree would not average values (ordinal encoding will not work for other models though like logistic regression). This would enable me to make some faster models in the initial stages to benchmark some results.
+- I one-hot-key encoded all my categorical features, which led to a large number of final features. I could implement ordinal encoding for decision tree models because a Decision Tree would not average values (ordinal encoding will not work for other models though like logistic regression). This would enable me to make some faster models in the initial stages to benchmark some results.
 
 - I never really figured out the optimal number of trees for my random forests. More is always better in this case, but it would have been best to figure out an optimal number in terms of balancing results verse time early on in my model building.
 
