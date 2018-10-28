@@ -62,19 +62,24 @@ My best score was good enough for 4737 place out of 7198 submissions. In the end
 
 In conclusion, I learned a lot on this project, and I think I will learn more by progressing onto other projects rather than taking a large amount of time to eek out small gains on this model (not to mention the competition is completed). Kaggle is a great place to get into data science but there are some limitations to this framework. First of all, in some cases, much of the cleaning is done for you, and I suspect real world problems would not have such a nice starting point. Secondly, Kaggle problems are already formulated, and so you are not developing the skills necessary to formulate your own problems and projects. As a result, I am trying to think of projects that are more my own (hence the weather prediction project also posted in my portfolio). I could see returning to a Kaggle competition in time in order to see how I have grown as a data scientist.
 
-![](gini_times_corr.png)
+<p>
 <img src="directory.png" , style="width:800px;"/>
+    </p>
 Fig 1: A directory map of the project.
 
+<p>
 <img src="model_levels.png" , style="width:800px;"/>
+    </p>
 Fig 2: Breakdown for the workflow and ensemble levels in the project.
 
+<p>
 <img src="feat_imports.png" , style="width:800px;"/>
+    </p>
 Fig 3: Top 20 features ranked by importances for the level 1 Random Forest (all features, no polynomial interactions). This is not the final model in the ensemble, but it gives a good idea what is important. Many of my aggregated features appear. 
 
+<p>
 <img src="gini_times_corr.png" , style="width:800px;"/>
+    </p>
 Fig 4: Gini index of a feature times the correlation of that feature with the TARGET. This gives a rough idea of both the spread in a feature and its potential for predicting the TARGET value.
 
-<p>
-    <img src="gini_times_corr.png" width="220" height="240" />
-</p>
+
