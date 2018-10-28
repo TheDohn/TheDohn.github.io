@@ -1,3 +1,6 @@
+
+# Reflections on the project:
+
 ## My Kaggle score:
 My best score was good enough for 4737 place out of 7198 submissions. In the end I was a bit disappointed with the placement of my final score, but my best score .76360 was not that far from the winning score of .80570. (Note: this is AUC ROC score, so a score of .5 amounts to randomly guessing.) It is important to keep a couple of things in mind with Kaggle competitions: 
 
