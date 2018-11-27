@@ -22,10 +22,4 @@ Below are a list of projects I have been working on lately with the goal of deve
 
 
 
-## Possible future projects
-
-If you see something here of interest, or have other suggestions, please let me know!
-
-- [Human Protein Atlas Image Classification](https://www.kaggle.com/c/human-protein-atlas-image-classification)
-- [Russian bot data](https://github.com/fivethirtyeight/russian-troll-tweets/)
-
+##[]
