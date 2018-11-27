@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <meta charset="utf-8">
+          <title>Twitter Elections Integrity Archive Most retweeted accounts</title>
+     <script src="https://d3js.org/d3.v5.min.js"></script>
+     <style type="text/css">
+
+     html,body {
+          width: 100%;
+          height: 100%;
+          margin: 2px;
+          padding: 0px;
+          overflow-x: hidden;
+     }
+     /*mouseover display */
+     #hover_display {
+          position: absolute;
+          width: 400px;
+          height: auto;
+          padding: 10px;
+          background-color: white;
+          -webkit-border-radius: 10px;
+          -moz-border-radius: 10px;
+          border-radius: 10px;
+          -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+          -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+          box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+          pointer-events: none;
+     }
+     #hover_display.hidden {
+          display: none;
+     }
+     #hover_display p {
+          margin: 0;
+          font-family: sans-serif;
+          font-size: 16px;
+          line-height: 20px;
+     }
+
+     .tool_panel{
+          overflow: hidden;
+          border: solid;
+          border-color: black;
+          border-width: 1px;
+          height: 300px;
+          width: 1100px;
+     }
+
+     /* reference block */
+    .ref_class{
+          overflow: hidden;
+          border: solid;
+          border-color: black;
+          border-width: 1px;
+          height: 330px;
+          width: 400px;
+          left: 700px;
+          top:-320px;
+          position: relative;
+     }
+
+     /* dropdowns and respective block labels, axis */
+     #width_descrip{
+          position:relative;
+          top:0px;
+          left:20px;
+     }
+     #choose_w{
+          position:relative;
+          top:-15px;
+          left:20px;
+     }
+     #width_label{
+          position:absolute;
+          top:70px;
+          left:250px;
+     }
+     #height_descrip{
+          position:relative;
+          top:0px;
+          left:20px;
+     }
+     #choose_h{
+    	     position:relative;
+    	     top:-15px;
+    	     left:20px;
+     }
+     #height_label{
+          position:relative;
+          text-align: right;
+          top:80px;
+          left:100px;
+     }
+     #sort_descrip{
+          position:relative;
+          top:0px;
+          left:20px;
+     }
+     #choose_sort{
+          position:relative;
+          top:-15px;
+          left:20px;
+     }
+     #axis_sort_label{
+          position:relative;
+          top:350px;
+          left:500px;
+     }
+
+     </style>
+     </head>
+
+<body>
+
+<!-- introduction text at very top -->
+<div class="introduction">
+     <p>Below are the top 20 most retweeted English accounts from the <a href="https://about.twitter.com/en_us/values/elections-integrity.html#data"> Twitter Elections Integrity Archive</a>.
+          </br> Each block represents one Twitter account. By manipulating the drop down menus below, you can alter how the accounts are displayed.
+     </br>Each drop down has the following options:
+<ul>
+     <li>retweets: <em> The total number of retweets for all tweets of the account.</em>
+     <li>followers: <em> The total number of followers of the account.</em>
+     <li>following: <em> The total number of accounts the account is following.</em>
+</ul>
+     </br> By hovering over each account, details including the top 5 tweets from that account will display. </p>
+</div>
+
+<!-- drop down menus -->
+<div class="tool_panel">
+
+     <h3>Select the Twitter account attributes to display: </h3>
+
+     <div class = "x_axis_class" >
+          <p id = 'width_descrip'>Block width: <em> The block's width is proportional to the selected attribute.
+          </br>Twice as wide means the attribute is twice as large. </em>
+          </p>
+
+          <select id="choose_w">
+               <option value = "retweet_count">retweets</option>
+               <option value = "follower_count" selected="selected">followers</option>
+               <option value = "following_count"> following</option>
+               <option value = "retweet_count_D_follower_count">retweets/followers</option>
+               <option value = "follower_count_D_retweet_count"> followers/retweets</option>
+               <option value = "retweet_count_D_following_count"> retweets/following</option>
+               <option value = "following_count_D_retweet_count"> following/retweets</option>
+               <option value = "follower_count_D_following_count"> followers/following</option>
+               <option value = "following_count_D_follower_count"> following/follower</option>
+          </select>
+    </div>
+
+     <div class = "y_axis_class" >
+          <p id='height_descrip'> Block height: <em> The block's height is proportional to the selected attribute.
+          </br>Twice as tall means the attribute is twice as large.</em>
+          </p>
+
+          <select id="choose_h">
+               <option value = "retweet_count"selected="selected">retweets</option>
+               <option value = "follower_count" >followers</option>
+               <option value = "following_count"> following</option>
+               <option value = "retweet_count_D_follower_count">retweets/followers</option>
+               <option value = "follower_count_D_retweet_count"> followers/retweets</option>
+               <option value = "retweet_count_D_following_count"> retweets/following</option>
+               <option value = "following_count_D_retweet_count"> following/retweets</option>
+               <option value = "follower_count_D_following_count"> followers/following</option>
+               <option value = "following_count_D_follower_count"> following/follower</option>
+          </select>
+     </div>
+
+     <div class = "x_axis_sort" >
+          <p id = 'sort_descrip'>Horizontal position:<em> The block's horizontal position is the selected attribute ordered.
+          </br> Further to the right only means bigger (twice as far does not mean twice as large). </em>
+          </p>
+
+          <select id="choose_sort">
+               <option value = "retweet_count">retweets</option>
+               <option value = "follower_count" >followers</option>
+               <option value = "following_count" selected="selected"> following</option>
+               <option value = "retweet_count_D_follower_count">retweets/followers</option>
+               <option value = "follower_count_D_retweet_count"> followers/retweets</option>
+               <option value = "retweet_count_D_following_count"> retweets/following</option>
+               <option value = "following_count_D_retweet_count"> following/retweets</option>
+               <option value = "follower_count_D_following_count"> followers/following</option>
+               <option value = "following_count_D_follower_count"> following/follower</option>
+          </select>
+     </div>
+
+     <div class = "ref_class" >
+          <h2>Reference block:</h2>
+          <text left="200" top="200" id = "width_label">  </text>
+          <text style="text-align:right;" id = "height_label">  </text>
+     </div>
+
+</div><!-- end drop down menus -->
+
+<!-- mouseover  -->
+<div id = "hover_display" class = "hidden">
+     <p id = "userhandle"></p>
+     <p id = "user_profile_description"></p>
+     <p id = "retweet_count" </p>
+     <p id = "follower_count" </p>
+     <p id = "following_count" </p>
+     <p>Top 5 Tweets: </p>
+  	<p id = "t1"></p>
+     <p id = "t2"></p>
+     <p id = "t3"></p>
+     <p id = "t4"></p>
+     <p id = "t5"></p>
+</div><!-- end mouseover  -->
+
+<!-- horizontal axis sort label -->
+<div class = "axis_labels" >
+     <p id = "axis_sort_label"> x axis </p>
+</div>
+
+<!-- Define arrow head from : https://codepen.io/zxhfighter/pen/wWKqqX -->
+<svg width="300" height="11">
+     <defs>
+          <marker
+          id="arrow"
+          markerUnits="strokeWidth"
+          markerWidth="12"
+          markerHeight="12"
+          viewBox="0 0 12 12"
+          refX="6"
+          refY="6"
+          orient="auto">
+          <path d="M2,2 L10,6 L2,10 L6,6 L2,2" style="fill: black;"></path>
+          </marker>
+     </defs>
+</svg>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+     // def plot sizing, padding, transition time
+     var plot_top = 20;
+     var w = 1200;
+     var h = 250;
+     var x_pad = 1;
+     var tran_time = 1000;
+
+     //reference block
+     var svg_ref = d3.select("body")
+                     .selectAll("div.ref_class")
+                     .append("svg")
+                     .attr("width", 400)
+                     .attr("height", 400)
+                     .attr("fill", "blue")
+
+     // account blocks
+     var svg = d3.select("body")
+                 .append("svg")
+                 .attr("width", w)
+                 .attr("height", plot_top + h + 100)
+                 .attr("fill","blue")
+
+     //horizontal sort axis
+     var line = svg.append("line")
+                   .attr("x1",0)
+                   .attr("y1",h + plot_top + 10)
+                   .attr("x2", w - 10)
+                   .attr("y2",h + plot_top + 10)
+                   .attr("stroke","black")
+                   .attr("stroke-width",2)
+                   .attr("marker-end","url(#arrow)");
+
+     // js/d3 imports everything as strings, so be careful splitting up tweet list by delim I put in (<ET>)
+     var format_tweet_list = function(tweets_in){
+
+          temp_tweets = tweets_in.slice(1,-1)
+                                 .split("<ET>")
+
+          // strip off ', ' on last 4 tweets
+          for(i=1;i<temp_tweets.length;i++){
+               temp_tweets[i] =  temp_tweets[i].slice(2,)
+          }
+
+          return temp_tweets
+     }  // end format_tweet_list def
+
+
+     // initialize the data row on the first pass with import
+     var row_initializer = function(row){
+
+          return {
+               userid: row.userid,
+               user_display_name: row.user_display_name,
+               user_screen_name: row.user_screen_name,
+               user_profile_description: row.user_profile_description,
+               top_5_tweets: format_tweet_list(row.top_5_tweets),
+               retweet_count: +row.retweet_count,
+               follower_count: +row.follower_count,
+               following_count: +row.following_count,
+               Logb2_retweet_count: Math.log2(+row.retweet_count),
+               Logb2_follower_count: Math.log2(+row.follower_count),
+               Logb2_following_count: Math.log2(+row.following_count),
+               retweet_count_D_follower_count: (+row.retweet_count)/(+row.follower_count),
+               follower_count_D_retweet_count: (+row.follower_count)/(+row.retweet_count),
+               retweet_count_D_following_count: (+row.retweet_count)/(+row.following_count),
+               following_count_D_retweet_count: (+row.following_count)/(+row.retweet_count),
+               follower_count_D_following_count: (+row.follower_count)/(+row.following_count),
+               following_count_D_follower_count: (+row.following_count)/(+row.follower_count),
+               x_pos: "",
+               width: "",
+               height:""
+          };
+     }; // row_initializer def
+
+
+     d3.csv("tweet_final_small.csv", row_initializer)
+       .then(function(data_in){
+
+//*** INITIALIZE VARS AND FUNCTION DEFS ****************************************************
+//******************************************************************************************
+
+          /// Initialize the height, width, sort attributes
+          var x_pos_input = "following_count";
+          var height_input = "retweet_count";
+          var width_input = "follower_count";
+          var ref_width;
+          var ref_height;
+          var ref_block_approx_size = 100; // this is about as big as we want ref block
+
+          // get corresponding property for the drop down selection as we update
+          // seems ugly, but cant find a better way
+          function get_prop(row, pick_prop){
+
+               if(pick_prop=="retweet_count"){return row.retweet_count}
+               if(pick_prop=="follower_count"){return row.follower_count}
+               if(pick_prop=="following_count"){return row.following_count}
+               //if(pick_prop=="Logb2_retweet_count"){return row.Logb2_retweet_count}
+               //if(pick_prop=="Logb2_follower_count"){return row.Logb2_follower_count}
+               //if(pick_prop=="Logb2_following_count"){return row.Logb2_following_count}
+               if(pick_prop=="retweet_count_D_follower_count"){return row.retweet_count_D_follower_count}
+               if(pick_prop=="follower_count_D_retweet_count"){return row.follower_count_D_retweet_count}
+               if(pick_prop=="retweet_count_D_following_count"){return row.retweet_count_D_following_count}
+               if(pick_prop=="following_count_D_retweet_count"){return row.following_count_D_retweet_count}
+               if(pick_prop=="follower_count_D_following_count"){return row.follower_count_D_following_count}
+               if(pick_prop=="following_count_D_follower_count"){return row.following_count_D_follower_count}
+          };
+
+
+          function get_nice_label(pick_prop){
+
+               if(pick_prop=="retweet_count"){return "retweets"}
+               if(pick_prop=="follower_count"){return "followers" }
+               if(pick_prop=="following_count"){return "following"}
+               if(pick_prop=="retweet_count_D_follower_count"){return "retweets/followers"}
+               if(pick_prop=="follower_count_D_retweet_count"){return "followers/retweets"}
+               if(pick_prop=="retweet_count_D_following_count"){return "retweets/following"}
+               if(pick_prop=="following_count_D_retweet_count"){return "following/retweets"}
+               if(pick_prop=="follower_count_D_following_count"){return "followers/following"}
+               if(pick_prop=="following_count_D_follower_count"){return "following/followers"}
+
+          };
+
+          // the default sort is by userid, we will always return to this
+          function sort_by_userid(){
+               data_in = data_in.sort( function(a,b){return a.userid - b.userid} )
+          }
+
+          // initialize the width scaler
+          var width_scaler;
+
+          // update the block widths, and width scaler
+          function width_updater(width_input){
+
+               //get max width for scaler
+               max_width = 0;
+               for(i=0;i<data_in.length;i++){
+                    max_width = Math.max(  get_prop(data_in[i], width_input) , max_width)
+               }
+
+               // get sum of widths for scaler
+               sum_widths = 0;
+               for(i=0;i<data_in.length;i++){
+                    sum_widths = sum_widths + get_prop(data_in[i], width_input)
+               }
+
+               // update width scaler
+               width_scaler = d3.scaleLinear()
+                                .domain([0, max_width])
+                                .range([0, w*max_width/sum_widths]);
+
+               // calculate rescaled widths
+               for(i=0;i<data_in.length;i++){
+                    data_in[i].width = width_scaler(  get_prop(data_in[i], width_input))
+               }
+
+               // get the size that is closest, after rounding, to the ref block width.
+               window_width_in_data_units =  width_scaler.invert(ref_block_approx_size)
+               rounded_window_width_in_data_units = Number( window_width_in_data_units.toPrecision(1))
+               ref_width = width_scaler(rounded_window_width_in_data_units)
+
+          }// end width_updater
+
+
+          // initialize the height scaler, and max height
+          var h_scaler;
+          var max_height;
+
+          // update the block height, and height scaler
+          function height_updater(height_input){
+
+               //get max height
+               max_height = 0;
+               for(i=0;i<data_in.length;i++){
+                    max_height = Math.max(  get_prop(data_in[i], height_input) , max_height)
+               }
+
+               // update height scaler
+               h_scaler = d3.scaleLinear()
+                            .domain([0, max_height])
+                            .range([0, h]);
+
+               // calculate rescaled heights
+               for(i=0;i<data_in.length;i++){
+                    data_in[i].height = h_scaler ( get_prop(data_in[i], height_input))
+               }
+
+               // get the size that is closest, after rounding, to the ref block height.
+               window_height_in_data_units =  h_scaler.invert(ref_block_approx_size)
+               rounded_window_height_in_data_units = Number( window_height_in_data_units.toPrecision(1))
+               ref_height = h_scaler(rounded_window_height_in_data_units)
+          } // end height_updater
+
+
+          // update the block horizontal position
+          function x_pos_updater(x_pos_input){
+
+               //sort by selected x_property
+               data_in.sort(function(a,b){return + get_prop(a, x_pos_input)  - get_prop(b,x_pos_input)} );
+
+               //calculated new x positions
+               var x_pos_prev = 0
+               for(i=0;i<data_in.length;i++){
+                    x_pos_curr = x_pos_prev + x_pad + data_in[i].width;
+                    data_in[i].x_pos = x_pos_prev;
+                    x_pos_prev = x_pos_curr;
+               }
+
+               //resort by userid
+               sort_by_userid()
+
+          } // end block horizontal position
+
+//*** END INITIALIZE VARS AND FUNCTION DEFS ************************************************
+//******************************************************************************************
+
+
+     // first pass updating attributes as per default vals
+     sort_by_userid()  // this is the default sort
+     width_updater(width_input)
+     x_pos_updater(x_pos_input)
+     height_updater(height_input)
+
+
+     // get the new labels
+     d3.select("body")
+       .select("#width_label")
+       .text(rounded_window_height_in_data_units + " " + get_nice_label(width_input))
+
+     d3.select("#height_label")
+       .text(rounded_window_height_in_data_units + " " + get_nice_label(height_input))
+
+     d3.select("body")
+       .select("#axis_sort_label")
+      .text(get_nice_label(x_pos_input))
+
+      // build ref rect
+      svg_ref.append("rect")
+             .attr("x",250)
+             .attr("y",30)
+             .attr("height", ref_height + "px")
+             .attr("width", ref_width + "px")
+
+     //build the initial rects
+     svg.selectAll("rect") //weird bc there are no rects yet. We append them 2 lines down.
+        .data(data_in)
+        .enter()
+        .append("rect")
+        .attr("x", function(d){ return d.x_pos })
+        .attr("y", function(d,i){ return plot_top + h_scaler(max_height) - d.height})
+        .attr("height", function(d){return d.height + "px"})
+        .attr("width", function(d){return d.width + "px"})
+        .on("mouseover",function(d,i){
+
+               // change color on mouseover
+               d3.select(this)
+               .attr("fill","orange");
+
+               //Update the hover_display position and value
+               d3.select("#hover_display")
+                 .style("left", 300 + "px")
+                 .style("top", plot_top + 140 + "px")
+                 .style("width",function(){ return 500 + "px" })
+                 .select("#userhandle")
+                 .text( d.user_display_name + "@" + d.user_screen_name)
+                 .select("#user_profile_description")
+                 .text(d.user_profile_description)
+
+               // best way I could find to append lines to hover_display. must be a better way to combine?
+               for(i=0;i<d.top_5_tweets.length;i++){
+                    // shift the labeling that appears from the 0 starting val
+                    real_i = i + 1
+
+                    d3.select("#hover_display")
+                      .select("#t" + real_i)
+                      .text("(#" + real_i + ") " + d.top_5_tweets[i])
+               }
+
+               d3.select("#retweet_count")
+                 .text("retweets: " + d.retweet_count)
+               d3.select("#follower_count")
+                 .text("followers: " + d.follower_count)
+               d3.select("#following_count")
+                 .text("following: " + d.following_count)
+
+               //Show the hover_display
+               d3.select("#hover_display").classed("hidden", false);
+
+          })// close the mouseover
+
+          // change rects back to blue
+          .on("mouseout",function(){
+
+               d3.select(this)
+                 .attr("fill","blue");
+
+               //hide the hover_display
+               d3.select("#hover_display").classed("hidden",true)
+          })// close the mouseout
+          // end build the initial rects
+
+
+
+
+          // update dropdown width property
+          d3.select("#choose_w")
+            .on("change",function(d){
+
+                    //get new x property and update relevant attributes
+                    width_input = d3.select("#choose_w").property("value");
+                    width_updater(width_input)
+                    x_pos_updater(x_pos_input)
+
+                    //update the reference rectangle width
+                    svg_ref.selectAll("rect")
+                           .transition()
+                           .duration(tran_time)
+                           .attr("width", ref_width + "px")
+
+                    // update the width label
+                    d3.select("#width_label")
+                      .text(rounded_window_width_in_data_units + " " + get_nice_label(width_input))
+
+                    //update the rectangles
+                    svg.selectAll("rect") //weird bc there are no rects yet. We append them 2 lines down.
+                       .data(data_in)
+                       .transition()
+                       .duration(tran_time)
+                       .attr("x", function(d,i){ return d.x_pos })
+                   .attr("width", function(d){ return d.width + "px"})
+
+               })// close width property update
+
+
+               // dropdown update height property
+              d3.select("#choose_h")
+                .on("change", function(d){
+
+                    //get new y property
+                    height_input = d3.select("#choose_h").property("value");
+
+                    height_updater(height_input)
+
+                    svg_ref.selectAll("rect")
+                           .transition()
+                           .duration(tran_time)
+                           .attr("height", ref_height + "px")
+
+                    d3.select("#height_label")
+                      .text(rounded_window_height_in_data_units + " " + get_nice_label(height_input))
+
+                    svg.selectAll("rect")
+                       .data(data_in)
+                       .transition()
+                       .duration(tran_time)
+                       .attr("y", function(d,i){ return plot_top + h_scaler(max_height) - d.height})
+                       .attr("height", function(d){return d.height + "px"})
+
+               }) //close height property update
+
+               //update horizontal sort
+               d3.select("#choose_sort")
+                 .on("change", function(d){
+
+                    //get new x sort property
+                    x_pos_input = d3.select("#choose_sort").property("value");
+
+                    // update and resort data
+                    width_updater(width_input)
+                    x_pos_updater(x_pos_input)
+
+                    //rezero position for sorting
+                    prior_x = 0;
+
+                    svg.selectAll("rect")
+                       .data(data_in)
+                       .transition()
+                       .duration(tran_time)
+                       .attr("x", function(d,i){ return d.x_pos })
+
+                    d3.select("body")
+                      .select("#axis_sort_label")
+                      .text(get_nice_label(x_pos_input))
+
+               }) //close horizontal sort update
+
+          });//this closes d3.csv
+
+     </script>
+
+</body>
+</html>
