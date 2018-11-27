@@ -1,4 +1,4 @@
-# Reflections on 'Top 20 Tweets D3 Project':
+# Reflections on 'Top 20 Tweets D3 Project 1':
 
 Overall I am pretty content with what I was able to produce. It is not ultra-polished, but my goal here was only to get my feet wet with Javascript and D3.
 
