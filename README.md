@@ -21,4 +21,4 @@ Below are a list of projects I have been working on lately with the goal of deve
 
 ## Twitter Elections Integrity Archive (In Progress)
 
--[My project]](Twitter_Elections_Integrity_Archive/)
+-[My project](Twitter_Elections_Integrity_Archive/)
