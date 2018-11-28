@@ -233,11 +233,6 @@
 
 
 
-
-
-
-
-
 <script type="text/javascript">
 
      // def plot sizing, padding, transition time
@@ -473,7 +468,7 @@
 
      d3.select("body")
        .select("#axis_sort_label")
-      .text(get_nice_label(x_pos_input))
+       .text(get_nice_label(x_pos_input))
 
       // build ref rect
       svg_ref.append("rect")
@@ -495,7 +490,7 @@
 
                // change color on mouseover
                d3.select(this)
-               .attr("fill","orange");
+                 .attr("fill","orange");
 
                //Update the hover_display position and value
                d3.select("#hover_display")
@@ -568,7 +563,7 @@
                        .transition()
                        .duration(tran_time)
                        .attr("x", function(d,i){ return d.x_pos })
-                   .attr("width", function(d){ return d.width + "px"})
+                       .attr("width", function(d){ return d.width + "px"})
 
                })// close width property update
 
