@@ -16,7 +16,7 @@ Below are a list of projects I have been working on lately with the goal of deve
 
 ## Comparing long-term weather forecasts(In Progress)
 
-[My project](Comparing_long-term_weather_forecasts/) 
+-[My project](Comparing_long-term_weather_forecasts/) 
 
 
 ## Twitter Elections Integrity Archive (In Progress)
