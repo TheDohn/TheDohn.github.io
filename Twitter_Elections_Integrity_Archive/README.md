@@ -1,4 +1,4 @@
-# Reflections on 'Top 20 Tweets D3 Project 1':
+# Top 20 Tweets D3 Project 1:
 
 The final presentation is close to what I set out to produce, and there are still some improvements to be made. For example, this project could be extended to include the ability of a user to input any equation of the attributes (including more attributes and things like Logarithms etc). Seeing the final product makes me realize that representing the attributes geometrically as I have limits the number of accounts that can be displayed, and so this is as far as I will go with this project (although I am thinking about other smaller data sets that could be usefully displayed in this way). Also, most people are not going to be interested in things like ratios of numerical attributes. Most people are probably more interested in the tweets themselves, so my next project is to find a way to search through and group the tweet content. 
 
