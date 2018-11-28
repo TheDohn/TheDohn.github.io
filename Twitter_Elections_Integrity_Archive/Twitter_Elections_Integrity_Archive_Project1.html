@@ -197,7 +197,7 @@
 <!-- mouseover  -->
 <div id = "hover_display" class = "hidden">
      <p id = "userhandle"></p>
-     <p id = "user_profile_description"></p>
+     <p id = "user_profile_descrp"></p>
      <p id = "retweet_count" </p>
      <p id = "follower_count" </p>
      <p id = "following_count" </p>
@@ -468,7 +468,7 @@
 
      d3.select("body")
        .select("#axis_sort_label")
-       .text(get_nice_label(x_pos_input))
+      .text(get_nice_label(x_pos_input))
 
       // build ref rect
       svg_ref.append("rect")
@@ -490,7 +490,7 @@
 
                // change color on mouseover
                d3.select(this)
-                 .attr("fill","orange");
+               .attr("fill","orange");
 
                //Update the hover_display position and value
                d3.select("#hover_display")
@@ -499,7 +499,9 @@
                  .style("width",function(){ return 500 + "px" })
                  .select("#userhandle")
                  .text( d.user_display_name + "@" + d.user_screen_name)
-                 .select("#user_profile_description")
+
+               d3.select("#hover_display")
+                 .select("#user_profile_descrp")
                  .text(d.user_profile_description)
 
                // best way I could find to append lines to hover_display. must be a better way to combine?
@@ -563,7 +565,7 @@
                        .transition()
                        .duration(tran_time)
                        .attr("x", function(d,i){ return d.x_pos })
-                       .attr("width", function(d){ return d.width + "px"})
+                   .attr("width", function(d){ return d.width + "px"})
 
                })// close width property update
 
