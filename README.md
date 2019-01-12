@@ -20,4 +20,4 @@ Please note that many csv files are beyond GitHubs upload limitations. In order 
 
 -[Twitter Data](https://about.twitter.com/en_us/values/elections-integrity.html#data)
 
--[My project](Twitter_Elections_Integrity_Archive/)
+-[Account Display Project](Twitter_Elections_Integrity_Archive/)
