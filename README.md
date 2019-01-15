@@ -14,7 +14,7 @@ Please note that many csv files are beyond GitHubs upload limitations. In order 
 
 -[Twitter Data](https://about.twitter.com/en_us/values/elections-integrity.html#data)
 
--[2 Projects](Twitter_Elections_Integrity_Archive/)
+-[My Projects](Twitter_Elections_Integrity_Archive/)
 
 ## Comparing long-term weather forecasts(In Progress)
 
