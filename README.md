@@ -1,6 +1,6 @@
 # Data Science Portfolio
 
-Below are a list of projects I have been working on lately with the goal of developing my data science skills. 
+Below are a list of projects I have been working on lately with the goal of developing my data science skills. Many of the iPython notebooks are large enough that they will not display in Github, and you will have to download them to view them. 
 
 ## Kaggle Home Credit Default Risk
 
@@ -16,10 +16,10 @@ Please note that many csv files are beyond GitHubs upload limitations. In order 
 
 -[My projects](Twitter_Elections_Integrity_Archive/)
 
-## Comparing long-term weather forecasts(In Progress)
+## Comparing long-term weather forecasts
 
 -[My project](Comparing_long-term_weather_forecasts/) 
 
-## Bayesian Analysis of NBA data (Just Boston 17-18 Season for now)
+## Bayesian Analysis of NBA data (Boston 17-18 Season)
 
 -[My project](Bayesian_NBA_Analysis/) 
