@@ -19,3 +19,7 @@ Please note that many csv files are beyond GitHubs upload limitations. In order 
 ## Comparing long-term weather forecasts(In Progress)
 
 -[My project](Comparing_long-term_weather_forecasts/) 
+
+## Bayesian Analysis of NBA data (Just Boston 17-18 Season for now)
+
+-[My project](Bayesian_NBA_Analysis/) 
