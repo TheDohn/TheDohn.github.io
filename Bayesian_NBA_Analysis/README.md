@@ -1,1 +1,1 @@
-Here is my nba data analysis.
+In the notebook I investigate a series of Bayesian models for the Boston Celtics 17-18 regular season points per game. The data is from: https://www.kaggle.com/pablote/nba-enhanced-stats#2017-18_officialBoxScore.csv.
