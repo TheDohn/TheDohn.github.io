@@ -9,4 +9,4 @@ get_historical_weather_data.ipynb: For scraping historical weather forecasts
 
 weather_analysis.ipynb: The final analysis and plots, including some brief conclusions. 
 
-I am overall not very satisfied with the final plots, but I believe this is due to the fact that I only scraped for 1 month, which isn't a lot of data for a project like this. None-the-less all the code runs and I consider the project complete. 
+I am overall not very satisfied with the final plots, but I believe this is due to the fact that I only scraped for 1 month, which isn't a lot of data for a project like this. None-the-less all the code runs and I consider the project mostly complete. I am currently scraping more forecasts but it will be a long time before I update this further.  
