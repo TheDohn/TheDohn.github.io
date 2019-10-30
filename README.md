@@ -2,7 +2,7 @@
 
 Below are a list of projects I have been working on lately with the goal of developing my data science skills. 
 
-**PLEASE NOTE THAT most of the iPython notebooks are so large enough that they will not display in Github, and you will have to download them to view them. **
+__PLEASE NOTE THAT most of the iPython notebooks are so large enough that they will not display in Github, and you will have to download them to view them.__
 
 ## Kaggle Home Credit Default Risk
 
