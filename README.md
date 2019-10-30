@@ -1,6 +1,8 @@
 # Data Science Portfolio
 
-Below are a list of projects I have been working on lately with the goal of developing my data science skills. Many of the iPython notebooks are large enough that they will not display in Github, and you will have to download them to view them. 
+Below are a list of projects I have been working on lately with the goal of developing my data science skills. 
+
+**PLEASE NOTE THAT most of the iPython notebooks are so large enough that they will not display in Github, and you will have to download them to view them. **
 
 ## Kaggle Home Credit Default Risk
 
