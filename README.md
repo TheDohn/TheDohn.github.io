@@ -1,6 +1,6 @@
 # Data Science Portfolio
 
-Below are a list of projects I have been working on lately with the goal of developing my data science skills. 
+Below is a list of projects I have been working on lately with the goal of developing my data science skills. 
 
 __PLEASE NOTE: most of the iPython notebooks are so large enough that they will not display in Github, and you will have to download them to view them.__
 
